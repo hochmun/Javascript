@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/07
+        이름 : 심규영
+        내용 : for문 2, p79
+     -->
+    <script>
+        for(let i = 1; i <= 100; i++) {
+            if(i % 5 == 0 && i % 7 != 0) {
+                document.write("<p class='red'>"+i+"</p>");
+            } else if (i % 7 == 0 && i % 5 != 0) {
+                document.write("<p class='green'>"+i+"</p>");
+            } else if (i % 7 == 0 && i % 5 == 0) {
+                document.write("<p class='aqua'>"+i+"</p>");
+            }
+        }
+    </script>
+    <style>
+        .red {color: red;}
+        .green {color: green;}
+        .aqua {color: aqua;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
