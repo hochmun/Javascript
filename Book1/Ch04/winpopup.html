@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/11
+        이름 : 심규영
+        내용 : 팝업창 예제, p115
+     -->
+    <script>
+        window.open("winpopup.html", "pop1", 
+        "width=300, height=400, \ left=300, top=50");
+    </script>
+</head>
+<body>
+    <p>
+        <img src="../img/window_object_1.JPG" usemap="#intro" 
+        alt="신간 책 소개">
+        <map name="intro" id="intro">
+            <area shape="rect" coords="230,368,280,390" href="#" alt="창 닫기" 
+            onclick="window.close();">
+        </map>
+    </p>
+</body>
+</html>
