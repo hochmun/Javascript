@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/13
+        이름 : 심규영
+        내용 : 함수 선언, p133
+     -->
+    <script>
+        let count = 0;
+        
+        myFnc();
+
+        function myFnc(){
+            count++;
+            document.write("hello"+count, "<br>");
+        }
+
+        myFnc();
+
+        let theFnc = () => {
+            count++;
+            document.write('bye'+count, '<br>');
+        }
+
+        theFnc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

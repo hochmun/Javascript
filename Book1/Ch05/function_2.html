@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/13
+        이름 : 심규영
+        내용 : 함수 정의문 사용 배경색 바꾸기, p134
+     -->
+    <script>
+        let color = ['white', 'yellow', 'aqua', 'purple'];
+    
+        let i = 0;
+        let changeColor = () => {
+            i++;
+            if (i >= color.length) {
+                i = 0;
+            }
+    
+            let bodyTag = document.getElementById('theBody');
+            bodyTag.style.backgroundColor = color[i];
+        }
+    </script>
+</head>
+<body id="theBody">
+    <button onclick="changeColor()">배경색 바꾸기</button>
+</body>
+</html>
