@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/14
+        이름 : 심규영
+        내용 : 5챕터 도전 1번문제, p155
+     -->
+    <script>
+        function chColor(){
+            let arrColor = ['#ff0', '#6c0', '#fcf', '#cf0', '#39f'];
+            let arrNum = Math.floor(Math.random()*arrColor.length);
+            let bodyTag = document.getElementById("theBody");
+            bodyTag.style.backgroundColor = arrColor[arrNum];
+        }
+    </script>
+</head>
+<body id="theBody">
+    <button onclick="chColor();">배경 색상 바꾸기</button>
+</body>
+</html>

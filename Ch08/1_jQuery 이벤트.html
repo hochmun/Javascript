@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_jQuery 이벤트</title>
+    <!-- 
+        날짜 : 2022/10/14
+        이름 : 심규영
+        내용 : jQuery 이벤트 실습하기
+
+        이벤트(Event)
+         - 사용자의 특정 액션에 반응하는 핸들러 처리
+         - 클릭, 더블클릭 등 다양한 이벤트 존재
+     -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <script>
+        let btn1click = () => {
+            alert('버튼1클릭');
+        }
+        
+        $(document).ready(()=>{
+            $('#btn2').on('click', ()=>{
+                alert('버튼2 클릭!');
+            });
+
+            $('#btn3').on('dblclick',()=>{
+                alert('버튼3 더블클릭');
+            });
+
+            $('#btn4').on('mousedown',()=>{
+                alert('버튼4 마우스다운');
+            });
+
+            $('#btn5').on('mouseup', ()=>{
+                alert('버튼5 마우스위!');
+            })
+        });
+     </script>
+</head>
+<body>
+    <h3>jQuery 이벤트</h3>
+
+    <button id="btn1" onclick="btn1click()">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+    <button id="btn4">버튼4</button>
+    <button id="btn5">버튼5</button>
+</body>
+</html>

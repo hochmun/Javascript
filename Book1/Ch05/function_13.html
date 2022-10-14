@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/14
+        이름 : 심규영
+        내용 : 5챕터 도전 2번 문제, p156
+     -->
+    <script>
+        function TestScore(name, kor, eng) {
+            this.userName = name;
+            this.korNum = kor;
+            this.engNum = eng;
+
+            this.getTestInfo = ()=>{
+                document.write(`이름: ${this.userName}<br>`);
+                document.write(`국어: ${this.korNum}<br>`);
+                document.write(`영어: ${this.engNum}<br>`);
+            }
+            this.getAvg = ()=>{
+                return (this.korNum+this.engNum)/2;
+            }
+        }
+
+        let kimgun = new TestScore('김군', 80, 90);
+        let ohgun = new TestScore('오군', 100, 80);
+
+        kimgun.getTestInfo();
+        document.write(`평균 점수: ${kimgun.getAvg()}<br><br>`);
+
+        ohgun.getTestInfo();
+        document.write(`평균 점수 : ${ohgun.getAvg()}<br>`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
