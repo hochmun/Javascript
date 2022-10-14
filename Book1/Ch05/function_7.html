@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/14
+        이름 ; 심규영
+        내용 : 재귀 함수, p143
+     -->
+    <script>
+        let num = 0;
+        let testFnc = () => {
+            num++;
+            document.write(num, '<br>');
+            if (num == 10) return;
+
+            testFnc();
+        }
+
+        testFnc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

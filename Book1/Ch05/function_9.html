@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/14
+        이름 : 심규영
+        내용 : 지역 변수, 함수 충돌 방지, p148
+     -->
+    <script>
+        (function(){
+            let num = 100;
+            function menu(){
+                num += 100;
+                alert(num);
+            }
+            menu();
+        }());
+
+        (function(){
+            let num = 100;
+            function menu() {
+                alert(num);
+            }
+        }());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
