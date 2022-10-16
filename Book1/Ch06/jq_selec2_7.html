@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/16
+        이름 : 심규영
+        내용 : each()/$.each() 메서드, p199
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            let obj = [{
+                'area':'서울'
+            },{
+                'area':'부산'
+            },{
+                'area':'전주'
+            }]
+
+            $(obj).each((i,o)=>{
+                console.log(i+':',o);
+            });
+            console.log('====The End1====');
+
+            $.each($('#menu2 li'),(i,o)=>{
+                console.log(i+':',o);
+            });
+            console.log('====The End2====');
+
+            $.each($('#menu2 li'),function(i){
+                console.log(i+':',$(this));
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2-1</li>
+        <li>내용2-2</li>
+        <li>내용2-3</li>
+    </ul>
+</body>
+</html>

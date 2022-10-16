@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/16
+        이름 : 심규영
+        내용 : index() 메서드, p205
+            - 지정 선택 요소를 찾아서 인덱스 값을 반환
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            let idxNum = $('li').index($('#list3'));
+            console.log(idxNum);
+        })
+    </script>
+</head>
+<body>
+    <h1>배열 관련 함수</h1>
+
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li id="list3">내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>

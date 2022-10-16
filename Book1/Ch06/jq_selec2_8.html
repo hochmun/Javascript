@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/16
+        이름 : 심규영
+        내용 : $.map()/$.grep() 메서드, p201
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            let arr1 = [{
+                'area':'서울',
+                'name':'무대리'
+            }, {
+                'area':'부산',
+                'name':'홍과장'
+            }, {
+                'area':'대전',
+                'name':'박사장'
+            }, {
+                'area':'서울',
+                'name':'빅마마'
+            }]
+
+            let arr2 = $.map(arr1, (a,b)=>{
+                if (a.area == '서울') {
+                    return a;
+                }
+            });
+            console.log(arr2);
+            console.log('====first End====');
+
+            let arr3 = $.grep(arr1, (a,b)=>{
+                if (a.area == '서울') {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            console.log(arr3);
+            console.log('==== Second End ====');
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

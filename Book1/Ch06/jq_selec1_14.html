@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/16
+        이름 : 심규영
+        내용 : 상위 요소 선택자, p188
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('.txt1').parents()
+            .css({
+                'border':'2px dashed #00f'
+            });
+
+            $('.txt2').parents('div')
+            .css({
+                'border':'2px solid #f00'
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="txt1">선택자</h1>
+    <section>
+        <div>
+            <p class="txt1">내용</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p class="txt2">내용</p>
+        </div>
+    </section>
+</body>
+</html>
