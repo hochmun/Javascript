@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/17
+        이름 : 심규영
+        내용 : val() 메서드, p224
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            let result_1 = $('#user_name').val();
+            console.log(result_1); // 용대리
+
+            $('#user_id').val('javascript');
+
+            let result_2 = $('#user_id').prop('defaultValue');
+            console.log(result_2); // hello
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <form action="#" id="form_1">
+        <p>
+            <label for="user_name">이름</label>
+            <input type="text" name="user_name" id="user_name"
+            value="용대리">
+        </p>
+        <p>
+            <label for="user_id">아이디</label>
+            <input type="text" name="user_id" id="user_id"
+            value="hello">
+        </p>
+    </form>
+</body>
+</html>
