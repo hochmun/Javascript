@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/18
+        이름 : 심규영
+        내용 : clone()/empty()/remove() 메서드
+        , p237
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            /* class 값이 box1인 요소의 모든 자식 요소를 복제 */
+            const copyObj = $('.box1').children().clone();
+
+            /* class 값이 box2인 요소를 삭제 */
+            $('.box2').remove();
+
+            /* class 값이 box3인 요소의 하위 요소를 삭제 */
+            $('.box3').empty();
+            /* class 값이 box3인 요소 맨 뒤에 추가 */
+            $('.box3').append(copyObj);
+        })
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <p>내용1</p>
+        <p>내용2</p>
+    </div>
+    <div class="box2">
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+    <div class="box3">
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+</body>
+</html>

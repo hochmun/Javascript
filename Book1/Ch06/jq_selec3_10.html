@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/18
+        이름 : 심규영
+        내용 : append()/appendTo()/prepend()/prependTo() 메서드
+        , p236
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('<li>appendTo</li>').appendTo('#listZone');
+            $('#listZone').prepend('<li>prepend</li>');
+        })
+    </script>
+</head>
+<body>
+    <ul id="listZone">
+        <li>리스트</li>
+    </ul>
+</body>
+</html>

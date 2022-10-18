@@ -35,3 +35,8 @@
     - sub1. jQuery 이벤트 실습
     - sub2. jQuery 이벤트 함수 실습
     - sub3. jQuery 이벤트 객체 실습
+
+## Ch09. JQuery 애니메이션
+    - sub1. jQuery 애니메이션 실습
+    - sub2. jQuery 효과함수 실습
+    - sub3. 슬라이드 애니메이션 실습
