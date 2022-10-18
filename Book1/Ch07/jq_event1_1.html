@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/18
+        이름 : 심규영
+        내용 : 이벤트 등록 방식 알아보기, p249
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('.btn1').click(()=>{
+                $('.btn1').parent().next()
+                .css({
+                    'color':'red'
+                });
+            });
+
+            $('.btn2').on({
+                'mouseover focus':()=>{
+                    $('.btn2').parent().next()
+                    .css({
+                        'color':'green'
+                    });
+                },
+                'mouseout blur':()=>{
+                    $('.btn2').parent().next()
+                    .css({
+                        'color':'black'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+</body>
+</html>
