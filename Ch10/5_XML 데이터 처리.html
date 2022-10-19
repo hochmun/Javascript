@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5_XML 데이터 처리</title>
+    <!-- 
+        날짜 : 2022/10/19
+        이름 : 심규영
+        내용 : XML 데이터 처리
+     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $('button').click(()=>{
+                $.ajax({
+                    url:'http://chhak.or.kr/data/users.xml',
+                    type:'get',
+                    dataType:'xml',
+                    success:(data)=>{
+                        console.log(data);
+                        const users = $(data).find('user');
+                        users.each(function(){
+                            const tags = 
+                                `<tr>
+                                    <td>${$(this).find('uid').text()}</td>
+                                    <td>${$(this).find('name').text()}</td>
+                                    <td>${$(this).find('age').text()}</td>
+                                    <td>${$(this).find('hp').text()}</td>
+                                </tr>`;
+                            $('table').append(tags);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>XML 데이터 처리</h3>
+    <button>데이터 요청</button>
+
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>휴대폰</th>
+            <th>나이</th>
+        </tr>
+    </table>
+</body>
+</html>

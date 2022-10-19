@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4_XML 데이터 요청</title>
+    <!-- 
+        날짜 : 2022/10/19
+        이름 : 심규영
+        내용 : XML 데이터 요청 실습하기
+     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $('button').click(()=>{
+                // 데이터 요청
+                $.ajax({
+                    url:'http://chhak.or.kr/data/user.xml',
+                    type:'get',
+                    dataType:'xml',
+                    success: (data)=>{
+                        console.log(data);
+                        const xml = $(data);
+                        // XML 파싱
+                        $('p > span:eq(0)').text(xml.find('uid').text());
+                        $('p > span:eq(1)').text(xml.find('name').text());
+                        $('p > span:eq(2)').text(xml.find('hp').text());
+                        $('p > span:eq(3)').text(xml.find('age').text());
+                    },
+                    error: ()=>{
+                        console.log('error!');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>XML 데이터 요청</h3>
+    <button>데이터 요청</button>
+    <p>
+        아이디 : <span></span><br>
+        이름 : <span></span><br>
+        휴대폰 : <span></span><br>
+        나이 : <span></span><br>
+    </p>
+</body>
+</html>

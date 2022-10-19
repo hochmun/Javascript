@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/19
+        이름 : 심규영
+        내용 : ready()/load() 이벤트 메서드, p254
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $(document).ready(()=>{
+                const h1 = $(".img1").height();
+                console.log("ready :"+ h1); // ready : 0
+            });
+
+            $(window).on('load', ()=>{ 
+                const h2 = $(".img1").height();
+                console.log("load :"+ h2); // load : 300
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <img src="http://place-hold.it/300X300" class="img1">
+    </p>
+</body>
+</html>

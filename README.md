@@ -40,3 +40,10 @@
     - sub1. jQuery 애니메이션 실습
     - sub2. jQuery 효과함수 실습
     - sub3. 슬라이드 애니메이션 실습
+
+## Ch10. jQuery AJAX 통신
+    - sub1. Ajax 데이터 요청 실습
+    - sub2. Ajax 데이터 처리 실습
+    - sub3. Ajax 데이터 전송 실습
+    - sub4. XML 데이터 요청 실습
+    - sub5. XML 데이터 처리 실습
