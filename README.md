@@ -47,3 +47,4 @@
     - sub3. Ajax 데이터 전송 실습
     - sub4. XML 데이터 요청 실습
     - sub5. XML 데이터 처리 실습
+    - sub6. Ajax 단축함수 실습
