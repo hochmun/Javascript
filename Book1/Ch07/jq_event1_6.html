@@ -1,0 +1,41 @@
+<!-- 
+    날짜 : 2022/10/22
+    이름 : 심규영
+    내용 : mouseover, mouseout, hover 이벤트 메서드 예시, p258
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('.btn1').on({
+                'mouseover':()=>{
+                    $('.txt1').css({'background-color':'yellow'});
+                },
+                'mouseout':()=>{
+                    $('.txt1').css({'background':'none'});
+                }
+            });
+
+            $('.btn2').hover(()=>{
+                $('.txt2').css({'background-color':'aqua'});
+            }, ()=>{
+                $('.txt2').css({'background':'none'});
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button class="btn1">Mouse Over/Mouse Out</button>
+    </p>
+    <p class="txt1">내용1</p>
+    <p>
+        <button class="btn2">Hover</button>
+    </p>
+    <p class="txt2">내용2</p>
+</body>
+</html>

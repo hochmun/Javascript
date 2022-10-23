@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/23
+        이름 : 심규영
+        내용 : 키보드 이벤트 예제, p273
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $(document).on('keydown', keyEventFnc);
+            function keyEventFnc(e) {
+                let direct = '';
+
+                switch (e.keyCode) {
+                    case 37:
+                        direct = 'LEFT';
+                        break;
+                    case 38:
+                        direct = 'TOP';
+                        break;
+                    case 39:
+                        direct = 'RIGHT';
+                        break;
+                    case 40:
+                        direct = 'BOTTOM';
+                        break;
+                }
+                if (direct) $('#user_id').val(direct);
+            }
+        });
+    </script>
+</head>
+<body>
+    <p><input type="text" name="user_id" id="user_id"></p>
+</body>
+</html>

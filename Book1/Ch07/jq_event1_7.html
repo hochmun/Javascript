@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/22
+        이름 : 심규영
+        내용 : mouseout() 와 mouseleave() 메서드 차이점 예제, p260
+     -->
+</head>
+<script src="../lib/jquery-3.6.1.min.js"></script>
+<script>
+    $(()=>{
+        $('#box_1').on('mouseout',()=>{
+            $('#box_1').css({'background-color':'yellow'});
+        });
+
+        $('#box_2').on('mouseleave',()=>{
+            $('#box_2').css({'background-color':'pink'});
+        })
+    })
+</script>
+<body>
+    <h1>mouseout</h1>
+    <div id="box_1">
+        <p><a href="#">내용1</a></p>
+        <p><a href="#">내용2</a></p>
+        <p><a href="#">내용3</a></p>
+    </div>
+
+    <h1>mouseleave</h1>
+    <div id="box_2">
+        <p><a href="#">내용4</a></p>
+        <p><a href="#">내용5</a></p>
+        <p><a href="#">내용6</a></p>
+    </div>
+</body>
+</html>

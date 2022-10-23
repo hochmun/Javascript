@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/23
+        이름 : 심규영
+        내용 : delegate(), one() 이벤트 등록 메서드 예제, p281
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            /* [버튼1]에 마우스 포인터(포커스)를 올리면 경고 창에
+            'HELLO!'라는 메시지가 출력됨, 또한 라이브 이벤트 방식으로
+            이벤트를 등록하기 때문에 새로 생성한 요소에도 이벤트가 적용됨 */
+            $('.btn_wrap').delegate('.btn_1.on', 'mouseover focus',()=>{
+                alert('HELLO!');
+            });
+            $('.btn_1').addClass('on');
+
+            /* [버튼2]에 마우스 포인터를 올리면 경고 창에 'WELCOME!'이라는
+            메시지가 출력됩니다. 이벤트는 1회만 발생 */
+            $(document).one('mouseover focus','.btn_2.on',()=>{
+                alert('WELCOME!');
+            });
+            $('.btn_2').addClass('on');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p class="btn_wrap">
+            <button class="btn_1">버튼1</button>
+        </p>
+        <p><button class="btn_2">버튼2</button></p>
+    </div>
+</body>
+</html>

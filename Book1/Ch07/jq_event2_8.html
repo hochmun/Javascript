@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/23
+        이름 : 심규영
+        내용 : 이벤트 제거 메서드 사용법 예제, p283
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('.btn_1').on('mouseover',()=>{
+                alert('Hello!');
+            });
+            $(document).on('mouseover','.btn_2',()=>{
+                alert('welcome!');
+            });
+            const btn_2 = $("<p><button class='btn_2'>버튼2</button></p>");
+            $('#wrap').append(btn_2);
+
+            $('.del_1').on('click',()=>{
+                $('.btn_1').off('mouseover');
+            });
+            $('.del_2').on('click',()=>{
+                $(document).off('mouseover','.btn_2');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼1</button></p>
+    </div>
+    <p>
+        <button class="del_1">버튼1 이벤트 해제</button>
+        <button class="del_2">버튼2 이벤트 해제</button>
+    </p>
+</body>
+</html>

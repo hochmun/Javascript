@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/22
+        이름 : 심규영
+        내용 : scrollTop, scrollLeft 속성 예시, p264
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(window).on('scroll',function(){
+            const sc_top = $(this).scrollTop();
+            const sc_left = $(this).scrollLeft();
+
+            $('.top').text(sc_top);
+            $('.left').text(sc_left);
+        });
+    </script>
+    <style>
+        body {
+            height: 10000px;
+            width: 5000px;
+        }
+        #wrap {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>scrollTop: <span class="top">0</span>px</p>
+        <p>scrollLeft: <span class="left">0</span>px</p>
+    </div>
+</body>
+</html>
