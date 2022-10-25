@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/25
+        이름 : 심규영
+        내용 : clearQueue() 메서드 사용법 예제, p302
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('.txt1')
+            .animate({'marginLeft':'100px'},1000)
+            .animate({'marginLeft':'300px'},1000)
+            .animate({'marginLeft':'400px'},1000);
+
+            $('.txt2')
+            .animate({'marginLeft':'100px'},1000)
+            .animate({'marginLeft':'300px'},1000)
+            .animate({'marginLeft':'400px'},1000);
+            $('.txt2').clearQueue();
+        });
+    </script>
+    <style>
+        .txt1, .txt2 {
+            width: 50px;
+            text-align: center;
+            background-color: aqua;
+        }
+        .txt2 {background-color: orange;}
+    </style>
+</head>
+<body>
+    <p class="txt1">내용1</p>
+    <p class="txt2">내용2</p>
+</body>
+</html>
