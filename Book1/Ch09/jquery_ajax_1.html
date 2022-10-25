@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/25
+        이름 : 심규영
+        내용 : load() 함수를 사용하여 외부 파일의 일부 요소를 불러온 다음
+        선택한 문단 태그에 추가하는 예제, p318
+     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $('#newsWrap_1')
+            .load('jquery_ajax_news.html #news_1');
+
+            $('#newsWrap_2')
+            .load('jquery_ajax_news.html #news_2');
+        });
+    </script>
+</head>
+<body>
+    <h1>LOAD 1</h1>
+    <div id="newsWrap_1"></div>
+    <h1>LOAD 2</h1>
+    <div id="newsWrap_2"></div>
+</body>
+</html>

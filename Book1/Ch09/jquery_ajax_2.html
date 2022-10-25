@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/25
+        이름 : 심규영
+        내용 : HTML에 가상 회원 데이터(JSON)를 불러와 바인딩하기, p324
+     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $.ajax({
+                url:"js/MOCK_DATA.json",
+                dataType:"json",
+                success:(data)=>{
+                    if(data.length > 0) {
+                        const tb = $("<table/>");
+                        for (const i in data) {
+                            const $id = data[i].id;
+                            const $first_name = data[i].first_name;
+                            const $last_name = data[i].last_name;
+                            const $email = data[i].email;
+
+                            const row = $('<tr/>').append(
+                                $('<td/>').text($id),
+                                $('<td/>').text($first_name),
+                                $('<td/>').text($last_name),
+                                $('<td/>').text($email),
+                            );
+
+                            tb.append(row);
+                        }
+                        $('.wrap').append(tb);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>

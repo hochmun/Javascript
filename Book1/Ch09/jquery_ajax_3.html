@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/25
+        이름 : 심규영
+        내용 : HTML에 가상 회원 데이터(XML)를 불러와 바인딩하기, p327
+     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(()=>{
+            $.ajax({
+                url:'js/dataset.xml',
+                dataType:'xml',
+                success:(data)=>{
+                    const $data = $(data).find('record');
+                    if($data.length > 0) {
+                        const tb = $('<table/>');
+                        $.each($data, (i,o)=>{
+                            const $id = $(o).find('id').text();
+                            const $first_name = $(o).find('first_name').text();
+                            const $last_name = $(o).find('last_name').text();
+                            const $email = $(o).find('email').text();
+                            const $gender = $(o).find('gender').text();
+                            const row = $('<tr/>').append(
+                                $('<td/>').text($id),
+                                $('<td/>').text($first_name),
+                                $('<td/>').text($last_name),
+                                $('<td/>').text($email),
+                                $('<td/>').text($gender)
+                            );
+                            tb.append(row);
+                        });
+                        $('.wrap').append(tb);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>
