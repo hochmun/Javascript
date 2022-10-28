@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/28
+        이름 : 심규영
+        내용 : 간단한 플러그인 제작하기, p362
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $.fn.open = function(eventType, message) {
+                const ts = $(this);
+                $.each(ts, function(i, o){
+                    $(o).on(eventType, function(){
+                        alert(message);
+                    });
+                });
+            }
+            $(".btn1").open("mouseover","welcome!");
+            $(".btn2").open("click","hello!");
+        });
+    </script>
+</head>
+<body>
+    <p><button class="btn1">버튼1</button></p>
+    <p><button class="btn2">버튼2</button></p>
+    <p><button class="btn3">버튼3</button></p>
+</body>
+</html>

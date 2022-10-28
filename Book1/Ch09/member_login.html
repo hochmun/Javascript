@@ -9,8 +9,24 @@
             const $frm = $('.login_f');
             $frm.on('submit',(e)=>{
                 e.preventDefault();
-            })
-        })
+                const myData = $frm.serialize();
+
+                $.ajax({
+                    type: "post",
+                    url: $frm.attr("action"),
+                    data: myData,
+                    success: (res)=>{
+                        if(res) {
+                            const jsonData = JSON.parse(res);
+                            const message = jsonData.user_name +
+                            "(" + jsonData.user_id + ")"
+                            + "님 반갑습니다";
+                            $(".login_wrap").html(message);
+                        }
+                    }
+                });
+            });
+        });
     </script>
 </head>
 <body>

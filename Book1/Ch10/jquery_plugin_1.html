@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        날짜 : 2022/10/28
+        이름 : 심규영
+        내용 : UI 플러그인으로 드래그 레이어 창 만들기, p349
+     -->
+    <script src="../lib/jquery-3.6.1.min.js"></script>
+    <script src="../lib/jquery-ui.min.js"></script>
+    <style>
+        .layer_popup {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            cursor: move;
+        }
+    </style>
+    <script>
+        $(()=>{
+            $('.layer_popup').draggable();
+        });
+    </script>
+</head>
+<body>
+    <div class="layer_popup">
+        <img src="../img/window_object_1.JPG" alt="">
+    </div>
+</body>
+</html>
